@@ -25,8 +25,9 @@ jobs:
 
     - name: Build Docker image
       run: |
-        docker build -t ghcr.io/yanni8/micro-docker:${{ github.ref_name }} .
+        docker build -t ghcr.io/yanni8/micro-docker:${{ github.ref_name }} -t ghcr.io/yanni8/micro-docker:latest .
 
     - name: Push Docker image
       run: |
         docker push ghcr.io/yanni8/micro-docker:${{ github.ref_name }}
+        docker push ghcr.io/yanni8/micro-docker:latest
