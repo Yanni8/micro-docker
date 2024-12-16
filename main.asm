@@ -1,6 +1,6 @@
 section .data
-	text:     db 'Hello World!',10    ; 'Hello world!' plus a linefeed character
-	len:  equ $-text             ; Length of the 'Hello world!' string
+	text:     db 'Hello World!',10 
+	len:  equ $-text
 
 section .text
 	global _start
